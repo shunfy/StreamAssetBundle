@@ -10,13 +10,13 @@ public class test : MonoBehaviour
         StreamEncryption.DecryptAssetBundle(Application.streamingAssetsPath + "/assets/cube.ab", "Cube",(prefab)=>
         {
             var obj = GameObject.Instantiate<GameObject>(prefab as GameObject);
-            obj.transform.localPosition = new Vector3(0, 10, 0);
+            obj.transform.localPosition = new Vector3(0, 1, 0);
         });
 
         StartCoroutine(StreamEncryption.AsyncLoad(Application.streamingAssetsPath + "/assets/cube.ab", "Cube", (prefab) =>
         {
             var obj = GameObject.Instantiate<GameObject>(prefab as GameObject);
-            obj.transform.localPosition = new Vector3(0, -10, 0);
+            obj.transform.localPosition = new Vector3(0, -1, 0);
         }));
     }
 
